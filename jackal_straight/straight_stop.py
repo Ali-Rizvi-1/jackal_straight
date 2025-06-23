@@ -24,7 +24,7 @@ class StraightStopNode(Node):
         self.stop_time = None
 
         # publishers / subscribers
-        self.cmd_pub  = self.create_publisher(Twist, 'cmd_vel_raw', 10)
+        self.cmd_pub  = self.create_publisher(Twist, 'cmd_vel', 10)
         self.odom_sub = self.create_subscription(
             Odometry, 'platform/odom', self.odom_cb, 10)
 
